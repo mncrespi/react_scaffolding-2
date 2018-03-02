@@ -82,7 +82,6 @@
     "wrap-iife": [2, "outside"],
     "yoda": [2, "never"],
 
-    "react/prefer-stateless-function": [2],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-uses-vars": [2],
     "react/jsx-no-undef": [2],
@@ -116,6 +115,7 @@
         "/^render.+$/",
         "render"
       ]
-    }]
+    }],
+    "react/prefer-stateless-function": [0]
   }
 }
