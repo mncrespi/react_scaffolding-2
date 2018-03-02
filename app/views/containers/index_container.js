@@ -1,5 +1,5 @@
-import React, { Component }         from 'react';
-import { Link, }                    from 'react-router-dom'
+import React, { Component, } from 'react'
+import { Link, } from 'react-router-dom'
 
 
 export default class IndexContainer extends Component {
@@ -10,7 +10,7 @@ export default class IndexContainer extends Component {
     super()
   }
 
-  render () {
+  render() {
     return  <div>
               <h1>INDEX</h1>
               <Link to="/">INDEX</Link><br />

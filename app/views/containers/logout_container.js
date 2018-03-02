@@ -1,6 +1,6 @@
-import React, { Component }         from 'react';
+import React, { Component, }         from 'react'
 import { Link, }                    from 'react-router-dom'
-import { clearToken }               from '../../api/auth_token'
+import { clearToken, }               from '../../api/auth_token'
 
 
 export default class IndexContainer extends Component {
@@ -9,11 +9,11 @@ export default class IndexContainer extends Component {
     super()
   }
 
-  componentWillMount () {
+  componentWillMount() {
     clearToken()
   }
 
-  render () {
+  render() {
     return  <div>
               <h1>LOGOUT</h1>
               <h3>Logged Out!</h3>

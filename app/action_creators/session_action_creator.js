@@ -2,7 +2,7 @@ import Types from '../action_types/session'
 
 import { authenticate as authenticateCall, } from '../api/api_calls'
 
-export default function authenticate(email, password) {
+export function authenticate(email, password) { // eslint-disable-line
   return {
     type: Types.AUTHENTICATE,
     callAPI: () => authenticateCall({
