@@ -4,10 +4,13 @@ import PropTypes from 'prop-types'
 
 export default class Login extends Component {
 
-  // todo: "react/require-default-props": [0]
   static propTypes = {
     authenticationError: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
+  }
+
+  static defaultProps = {
+    authenticationError: false,
   }
 
   constructor(props) {

@@ -20,13 +20,18 @@ class LoginContainer extends Component {
   static propTypes = {
     authenticationError: PropTypes.object,
     dispatch: PropTypes.func,
-    match: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
+    // match: PropTypes.object.isRequired,
+    // location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
   }
 
   static contextTypes = {
     router: PropTypes.object.isRequired,
+  }
+
+  static defaultProps = {
+    authenticationError: false,
+    dispatch: () => {},
   }
 
   constructor() {
