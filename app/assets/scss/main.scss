@@ -3,3 +3,17 @@ $color: #262828;
 body {
   color: $color;
 }
+
+.loginContainer {
+  width: 400px;
+  margin: 50px auto auto;
+}
+.loginBox {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid gray;
+  text-align: left;
+  //background-image: url("src/assets/images/profile_picture.png");
+  background-color: aquamarine;
+  background-size: cover;
+}
