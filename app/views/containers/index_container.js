@@ -1,5 +1,6 @@
 import React, { Component, } from 'react'
 import { Link, } from 'react-router-dom'
+import ReactLogo from '../components/ReactLogo'
 
 
 export default class IndexContainer extends Component {
@@ -17,6 +18,7 @@ export default class IndexContainer extends Component {
               <Link to="/protected">PROTECTED</Link><br />
               <Link to="/login">LOGIN</Link><br />
               <Link to="/logout">LOGOUT</Link><br />
+              <ReactLogo />
             </div>
   }
 
