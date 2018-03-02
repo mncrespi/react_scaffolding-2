@@ -23,7 +23,7 @@
     "react"
   ],
   "rules": {
-    "space-before-function-paren": [2, {"anonymous": "always", "named": "always"}],
+    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
     "semi": [2, "never"],
     "linebreak-style": "off",
     "global-require": "off",

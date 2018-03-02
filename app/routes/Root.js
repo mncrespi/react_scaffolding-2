@@ -1,14 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, } from 'react-router-dom'
+
 import App from '../components/App'
 
-const Root = () => {
+export default function Root() {
   return (
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={App}/>
+        </Switch>
+      </BrowserRouter>
   )
 }
-
-export default Root
-
