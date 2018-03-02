@@ -8,7 +8,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const NotifierPlugin = require('webpack-notifier');
 
 const config = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
 
   entry: [
     'react-hot-loader/patch',
@@ -18,18 +18,36 @@ const config = {
     './assets/scss/main.scss',
   ],
 
+  context: resolve(__dirname, 'app'),
+  target: 'web',
+
   output: {
     filename: 'bundle.js',
     path: resolve(__dirname, 'dist'),
-    publicPath: '',
+    publicPath: '/',
   },
 
-  context: resolve(__dirname, 'app'),
 
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
-    publicPath: '/'
+    publicPath: '/',
+    historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    noInfo: false,
+    // Configuration in case you need to proxy calls to an api
+    // proxy: { "/api/*": "http://localhost:5000"},
+    compress: false,
+    inline: true,
+    port: 8080,
+  },
+
+  cache: false,
+
+  stats: {
+    colors: true
   },
 
   module: {

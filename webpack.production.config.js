@@ -14,11 +14,12 @@ const config = {
   ],
 
   context: resolve(__dirname, 'app'),
+  target: 'web',
 
   output: {
     filename: 'bundle.js',
     path: resolve(__dirname, 'dist'),
-    publicPath: '',
+    publicPath: '/',
   },
 
   plugins: [
