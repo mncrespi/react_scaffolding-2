@@ -131,8 +131,7 @@
     "react/require-default-props": [1],
     "jsx-a11y/anchor-is-valid": [2, {
       "components": [ "Link" ],
-      "specialLink": [ "hrefLeft", "hrefRight", "to" ],
-      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      "specialLink": [ "to" ]
     }]
   }
 }
