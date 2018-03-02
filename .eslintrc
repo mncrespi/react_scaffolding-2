@@ -81,7 +81,6 @@
     "wrap-iife": [2, "outside"],
     "yoda": [2, "never"],
 
-    "react/prefer-stateless-function": [2],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-uses-vars": [2],
     "react/jsx-no-undef": [2],
@@ -116,6 +115,7 @@
     }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
+    "react/prefer-stateless-function": [0],
     "object-shorthand": [0],
     "no-console": [0],
     "no-param-reassign": [0],
