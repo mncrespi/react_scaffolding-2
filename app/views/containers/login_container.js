@@ -58,7 +58,7 @@ class LoginContainer extends Component {
   render() {
     return (
         <Login
-            onSubmit={this.handleSubmit.bind(this)}
+            onSubmit={(e) => this.handleSubmit(e)}
             authenticationError={this.props.authenticationError}
         />
     )

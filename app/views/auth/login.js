@@ -44,28 +44,25 @@ export default class Login extends Component {
     }
   }
 
-  // todo: check: "react/jsx-no-bind": [0]
-  // todo: check: "jsx-a11y/anchor-is-valid": [0]
-
   render() {
     return (
         <div className="loginContainer">
           <div className="loginBox">
             <h1>Enter your credential</h1>
-            <form onSubmit={this.handleSubmit.bind(this)}>
+            <form onSubmit={(e) => this.handleSubmit(e)}>
 
               {this.renderAuthenticationErrors()}
 
               <input
                   value={this.state.email}
-                  onChange={this.handleEmailChange.bind(this)}
+                  onChange={(e) => this.handleEmailChange(e)}
                   type="email"
                   placeholder="Email"
               />
 
               <input
                   value={this.state.password}
-                  onChange={this.handlePasswordChange.bind(this)}
+                  onChange={(e) => this.handlePasswordChange(e)}
                   type="password"
                   placeholder="Password"
               />
