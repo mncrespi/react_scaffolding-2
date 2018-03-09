@@ -39,13 +39,11 @@ function getIn(object, keyPath) {
 
   if (isUndefined(object)) {
     return undefined
+  } else if (keys.length === 1) {
+    return object[keys[0]]
   }
 
-  if (keys.length === 1) {
-    return object[keys[0]]
-  } else {
-    return getIn(object[keys[0]], keys.slice(1))
-  }
+  return getIn(object[keys[0]], keys.slice(1))
 }
 
 
@@ -116,9 +114,8 @@ export function set(sourceObject, keyPath, value) {
 export function merge(sourceObject, keyPath, object) {
   if (isObject(keyPath)) {
     return sourceObject.merge(keyPath, { deep: true, })
-  } else {
-    return sourceObject.merge(buildNestedObject({}, keyPath, object), { deep: true, })
   }
+  return sourceObject.merge(buildNestedObject({}, keyPath, object), { deep: true, })
 }
 
 /**

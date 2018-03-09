@@ -124,9 +124,8 @@
     }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
-    "no-useless-constructor": [2],
     "prefer-template": [0],
-    "no-else-return": [0],
+//    "no-else-return": [0],
     "no-underscore-dangle": [0],
     "react/jsx-wrap-multilines": 0,
     "react/jsx-tag-spacing": [0],

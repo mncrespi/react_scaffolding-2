@@ -26,11 +26,11 @@ class ProtectedRoutes extends Component {
           <Route path={this.props.match.url + '/home'} component={HomeContainer}/>
           <Route path={this.props.match.url + '/me'} component={MeContainer}/>
           <Route render={() => {
-            if (!isTokenSet()) {
-              return <Redirect to="/login"/>
-            } else {
+            if (isTokenSet()) {
               return <Redirect to={this.props.match.url + '/home'}/>
             }
+
+            return <Redirect to="/login"/>
           }}
           />
         </Switch>

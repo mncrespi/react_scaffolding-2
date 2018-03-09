@@ -9,22 +9,14 @@ import { isString, } from 'lodash'
  */
 export default function matchesAction(action, actionTest) {
   if (isString(actionTest)) {
-    if (action.type === actionTest) {
-      return true
-    } else {
-      return false
-    }
+    return (action.type === actionTest)
   }
 
   if (action.type === actionTest.request) {
     return true
-  }
-
-  if (action.type === actionTest.done) {
+  } else if (action.type === actionTest.done) {
     return true
-  }
-
-  if (action.type === actionTest.fail) {
+  } else if (action.type === actionTest.fail) {
     return true
   }
 
