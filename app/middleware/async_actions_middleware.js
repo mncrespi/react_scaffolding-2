@@ -57,7 +57,7 @@ export default function callAPIMiddleware({ dispatch, getState, }) {
       }
 
       dispatch({
-        payload: payload,
+        payload,
         type: type.request,
       })
 
@@ -70,12 +70,12 @@ export default function callAPIMiddleware({ dispatch, getState, }) {
       return callAPI()
           .then(
               (result) => Promise.resolve(dispatch({
-                payload: payload,
+                payload,
                 apiResponse: result.apiResponse,
                 type: type.done,
               })),
               (result) => Promise.resolve(dispatch({
-                payload: payload,
+                payload,
                 apiError: result.apiError,
                 type: type.fail,
               }))

@@ -66,6 +66,7 @@
     "no-unused-vars": [2, {"vars": "all", "args": "none"}],
     "no-unused-expressions": 2,
     "object-curly-spacing": [2, "always"],
+    "object-shorthand": [2],
     "prefer-const": [2],
     "padded-blocks": [2, {"classes": "always"}],
     "quotes": [2, "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
@@ -103,6 +104,7 @@
     "react/no-did-update-set-state": 2,
     "react/no-unknown-property": [2],
     "react/prop-types": 2,
+    "react/prefer-stateless-function": [0],
     "react/prefer-es6-class": 2,
     "react/sort-comp": [2, {
       "order": [
@@ -115,8 +117,6 @@
     }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
-    "react/prefer-stateless-function": [0],
-    "object-shorthand": [0],
     "no-console": [0],
     "no-param-reassign": [0],
     "no-useless-constructor": [0],
