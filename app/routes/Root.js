@@ -2,12 +2,12 @@ import React from 'react'
 import { BrowserRouter, Route, Switch, } from 'react-router-dom'
 
 /** Nested-Routes */
-import ProtectedRoutes              from './protected_routes'
+import ProtectedRoutes from './protected_routes'
 
 /** Containers */
-import IndexContainer               from '../views/containers/index_container'
-import LoginContainer               from '../views/containers/login_container'
-import LogoutContainer              from '../views/containers/logout_container'
+import IndexContainer from '../views/containers/index_container'
+import LoginContainer from '../views/containers/login_container'
+import LogoutContainer from '../views/containers/logout_container'
 
 
 export default function Root() {
