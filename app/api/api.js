@@ -162,12 +162,12 @@ function executeRequestFlow(options) {
 
     if (options.body) {
       request.send(options.body)
-      Object.keys(options.body)
-          .forEach((key) => {
-            if (options.body[key] === undefined) {
-              console.warn('Key was undefined in request body:', key)
-            }
-          })
+      // Object.keys(options.body)
+      //     .forEach((key) => {
+      //       if (options.body[key] === undefined) {
+      //         console.warn('Key was undefined in request body:', key)
+      //       }
+      //     })
     }
 
 
@@ -184,8 +184,8 @@ function executeRequestFlow(options) {
     // Prevent concurrent calls for the same Api Call type.
     if (options.cancelPendingRequests) {
 
-      if (request._apiCallName) console.log('WARNING: Prop clashing with request object')
-      if (!options.apiCallName) console.log('WARNING: To cancel previous calls the Api Call needs a name defined.')
+      // if (request._apiCallName) console.warn('WARNING: Prop clashing with request object')
+      // if (!options.apiCallName) console.warn('WARNING: To cancel previous calls the Api Call needs a name defined.')
 
       request._apiCallName = options.apiCallName
 

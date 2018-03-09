@@ -41,7 +41,9 @@
     "indent": [0, 0],
     "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
     "keyword-spacing": [2],
+    "max-len": [0],
     "new-cap": [2],
+    "no-console": [1],
     "no-debugger": [2],
     "no-dupe-args": 2,
     "no-dupe-keys": 2,
@@ -117,7 +119,6 @@
     }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
-    "no-console": [0],
     "no-param-reassign": [0],
     "no-useless-constructor": [0],
     "prefer-template": [0],
