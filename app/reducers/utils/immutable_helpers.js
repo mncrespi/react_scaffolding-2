@@ -13,17 +13,19 @@ import { isArray, isObject, isPlainObject, isUndefined, } from 'lodash'
  * f.i:
  *   buildNestedObject({}, 'student.teacher.name', 'john') => {student: {teacher: {name: 'john'}}}
  */
+// todo: hasOwnProperty 25:32; no-prototype-builtins
 function buildNestedObject(obj = {}, keyPath, value) {
   const keys = isArray(keyPath) ? keyPath : keyPath.split('.')
+  const o = obj
 
   if (keys.length === 1) {
-    obj[keys[0]] = value
+    o[keys[0]] = value
   } else {
     const key = keys.shift()
-    obj[key] = buildNestedObject(typeof obj[key] === 'undefined' ? {} : obj[key], keys, value)
+    o[key] = buildNestedObject(typeof o[key] === 'undefined' ? {} : o[key], keys, value)
   }
 
-  return obj
+  return o
 }
 
 /**

@@ -11,22 +11,23 @@ const initialState = ih.immutable({
 
 
 export default function sessionReducer(state = initialState, action) {
+  let st = state
 
   if (matchesAction(action, Types.AUTHENTICATE.request)) {
-    state = ih.set(state, 'authenticating', true)
+    st = ih.set(st, 'authenticating', true)
   }
 
   if (matchesAction(action, Types.AUTHENTICATE.done)) {
     storeToken(action.apiResponse.token)
 
-    state = ih.set(state, 'authenticating', false)
-    state = ih.set(state, 'user', action.apiResponse.user)
+    st = ih.set(st, 'authenticating', false)
+    st = ih.set(st, 'user', action.apiResponse.user)
   }
 
   if (matchesAction(action, Types.AUTHENTICATE.fail)) {
-    state = ih.set(state, 'authenticationError', action.apiError)
-    state = ih.set(state, 'authenticating', false)
+    st = ih.set(st, 'authenticationError', action.apiError)
+    st = ih.set(st, 'authenticating', false)
   }
 
-  return state
+  return st
 }

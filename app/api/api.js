@@ -24,12 +24,15 @@ import Promise from 'bluebird'
 // }
 //
 
+// todo: review
+
 const TIMEOUT = 15000
 
 
-function makeUrl(url) {
+function makeUrl(path) {
+  let url = path
   if (_.isArray(url)) {
-    url = `/${url.join('/')}`
+    url = `/${path.join('/')}`
   }
   url = `/api${url}`
   return url
@@ -137,8 +140,10 @@ function digestResponse(resolve, reject, error, request, response, options) {
 }
 
 
-function executeRequestFlow(options) {
+function executeRequestFlow(opt = {}) {
   return new Promise(((resolve, reject) => {
+
+    const options = opt
 
     options.method = options.method || 'GET'
 
@@ -206,27 +211,32 @@ function executeRequestFlow(options) {
 const Api = {
   execute: executeRequestFlow,
 
-  get(options) {
+  get(opt = {}) {
+    const options = opt
     options.method = 'GET'
     return executeRequestFlow(options)
   },
 
-  put(options) {
+  put(opt = {}) {
+    const options = opt
     options.method = 'PUT'
     return executeRequestFlow(options)
   },
 
-  post(options) {
+  post(opt = {}) {
+    const options = opt
     options.method = 'POST'
     return executeRequestFlow(options)
   },
 
-  delete(options) {
+  delete(opt = {}) {
+    const options = opt
     options.method = 'DELETE'
     return executeRequestFlow(options)
   },
 
-  head(options) {
+  head(opt = {}) {
+    const options = opt
     options.method = 'HEAD'
     return executeRequestFlow(options)
   },

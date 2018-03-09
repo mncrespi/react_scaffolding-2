@@ -59,6 +59,7 @@
     "no-restricted-syntax": [2, "WithStatement"],
     "no-spaced-func": 2,
     "no-empty": 2,
+    "no-param-reassign": [2],
     "no-shadow": [0],
     "no-tabs": [2],
     "no-var": [2],
@@ -119,7 +120,6 @@
     }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
-    "no-param-reassign": [0],
     "no-useless-constructor": [0],
     "prefer-template": [0],
     "no-else-return": [0],
