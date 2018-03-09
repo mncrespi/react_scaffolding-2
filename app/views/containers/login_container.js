@@ -34,10 +34,6 @@ class LoginContainer extends Component {
     dispatch: () => {},
   }
 
-  constructor() {
-    super()
-  }
-
   componentWillMount() {
     if (isTokenSet()) {
       this.props.history.push('/protected')

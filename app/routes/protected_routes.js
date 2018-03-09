@@ -14,10 +14,6 @@ class ProtectedRoutes extends Component {
     history: PropTypes.object.isRequired,
   }
 
-  constructor() {
-    super()
-  }
-
   componentWillMount() {
     if (!isTokenSet()) {
       this.props.history.push('/login')

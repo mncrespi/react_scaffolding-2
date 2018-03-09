@@ -7,10 +7,6 @@ export default class IndexContainer extends Component {
 
   static propTypes = {}
 
-  constructor() {
-    super()
-  }
-
   render() {
     return  <div>
               <h1>INDEX</h1>

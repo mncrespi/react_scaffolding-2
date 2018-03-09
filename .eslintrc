@@ -118,9 +118,13 @@
         "render"
       ]
     }],
+    "jsx-a11y/anchor-is-valid": [2, {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
 
     //    "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
-    "no-useless-constructor": [0],
+    "no-useless-constructor": [2],
     "prefer-template": [0],
     "no-else-return": [0],
     "no-underscore-dangle": [0],
@@ -129,10 +133,6 @@
     "react/jsx-no-bind": [2],
     "react/forbid-prop-types": 0,
     "react/no-unused-prop-types": 1,
-    "react/require-default-props": [1],
-    "jsx-a11y/anchor-is-valid": [2, {
-      "components": [ "Link" ],
-      "specialLink": [ "to" ]
-    }]
+    "react/require-default-props": [1]
   }
 }

@@ -5,10 +5,6 @@ import { clearToken, }               from '../../api/auth_token'
 
 export default class IndexContainer extends Component {
 
-  constructor() {
-    super()
-  }
-
   componentWillMount() {
     clearToken()
   }

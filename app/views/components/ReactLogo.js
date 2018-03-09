@@ -6,10 +6,6 @@ export default class IndexContainer extends Component {
 
   static propTypes = {}
 
-  constructor() {
-    super()
-  }
-
   render() {
     return  <div>
               <h2 id="heading">Hello ReactJS</h2>
