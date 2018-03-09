@@ -53,6 +53,7 @@ function defaultParser(res) {
   if (isSuccessStatus(res.status)) {
     return this.done(res.body)
   }
+  return false
 }
 
 

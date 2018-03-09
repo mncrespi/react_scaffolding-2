@@ -42,6 +42,7 @@ export default class Login extends Component {
     if (this.props.authenticationError) {
       return <div>{this.props.authenticationError.errorMessage}</div>
     }
+    return false
   }
 
   render() {

@@ -53,7 +53,7 @@ export default function callAPIMiddleware({ dispatch, getState, }) {
       }
 
       if (!shouldCallAPI(getState())) {
-        return
+        return false
       }
 
       dispatch({

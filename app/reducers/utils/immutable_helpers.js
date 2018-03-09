@@ -99,6 +99,7 @@ export function set(sourceObject, keyPath, value) {
     merged[keys[0]] = set(undefined, keys.slice(1), value)
     return Immutable(merged)
   }
+  return false
 }
 
 
