@@ -8,14 +8,16 @@ export default class IndexContainer extends Component {
   static propTypes = {}
 
   render() {
-    return  <div>
-              <h1>INDEX</h1>
-              <Link to="/">INDEX</Link><br />
-              <Link to="/protected">PROTECTED</Link><br />
-              <Link to="/login">LOGIN</Link><br />
-              <Link to="/logout">LOGOUT</Link><br />
-              <ReactLogo />
-            </div>
+    return (
+        <div>
+          <h1>INDEX</h1>
+          <Link to="/">INDEX</Link><br/>
+          <Link to="/protected">PROTECTED</Link><br/>
+          <Link to="/login">LOGIN</Link><br/>
+          <Link to="/logout">LOGOUT</Link><br/>
+          <ReactLogo/>
+        </div>
+    )
   }
 
 }

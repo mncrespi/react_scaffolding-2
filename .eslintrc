@@ -68,6 +68,7 @@
     "no-const-assign": [2],
     "no-unused-vars": [2, {"vars": "all", "args": "none"}],
     "no-unused-expressions": 2,
+    "no-underscore-dangle": [0],
     "object-curly-spacing": [2, "always"],
     "object-shorthand": [2],
     "prefer-const": [2],
@@ -123,8 +124,7 @@
       "specialLink": [ "to" ]
     }],
 
-    "no-underscore-dangle": [0],
-    "react/jsx-wrap-multilines": 0,
+//    "react/jsx-wrap-multilines": 0,
     "react/jsx-tag-spacing": [0],
     "react/jsx-no-bind": [2],
     "react/forbid-prop-types": 0,
